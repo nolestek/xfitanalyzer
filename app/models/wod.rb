@@ -1,3 +1,3 @@
 class Wod < ActiveRecord::Base
-	blongs_to :user	
+	belongs_to :user	
 end
