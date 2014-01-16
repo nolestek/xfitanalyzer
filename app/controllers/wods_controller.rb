@@ -10,6 +10,7 @@ class WodsController < ApplicationController
   # GET /wods/1
   # GET /wods/1.json
   def show
+    @wod = Wod.find(params[:id])
   end
 
   # GET /wods/new
