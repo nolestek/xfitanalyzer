@@ -70,6 +70,6 @@ class WodsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wod_params
-      params.require(:wod).permit(:description, :result, :user_id)
+      params.require(:wod).permit(:description, :result, :user_id, :name, :date)
     end
 end

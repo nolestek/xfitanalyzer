@@ -1,8 +1,10 @@
-<h1>Listing wods</h1>
+<h1>Listing workouts</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Date</th>
       <th>Description</th>
       <th>Result</th>
       <th>User</th>
@@ -15,9 +17,11 @@
   <tbody>
     <% @wods.each do |wod| %>
       <tr>
+        <td><%= wod.name %></td>
+        <td><%= wod.date %></td>  
         <td><%= wod.description %></td>
         <td><%= wod.result %></td>
-        <td><%= wod.user_id %></td>
+        <td><%= wod.user_id %></td>              
         <td><%= link_to 'Show', wod %></td>
         <td><%= link_to 'Edit', edit_wod_path(wod) %></td>
         <td><%= link_to 'Destroy', wod, method: :delete, data: { confirm: 'Are you sure?' } %></td>

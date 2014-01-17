@@ -10,5 +10,25 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>Wods:</strong>
+  <table>
+  <th>Name</th>
+  <th>Date</th>
+  <th>Description</th>
+  <th>Result</th>
+  <tbody>
+  <% @wods = @user.wods.all %>
+  <% @wods.each do |wod| %>
+  <tr>
+  <td><%= wod.name %></td>
+  <td><%= wod.date %></td>
+  <td><%= wod.description %></td>
+  <td><%= wod.result %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back to users list', users_path %>

@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20140116231935) do
     t.string   "description"
     t.string   "result"
     t.integer  "user_id"
+    t.string   "name"
+    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -4,6 +4,8 @@ class CreateWods < ActiveRecord::Migration
       t.string :description
       t.string :result
       t.integer :user_id
+      t.string :name
+      t.string :date
 
       t.timestamps
     end
