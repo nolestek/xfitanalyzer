@@ -13,7 +13,9 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.select :name, options_for_select(["Fran", "Cindy", "Annie"]) %>
+    <% allwods = Wod.all %>
+    <% wodnames = allwods.collect{|wod| wod.name} %>
+    <%= f.select :name, options_for_select(wodnames) %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
